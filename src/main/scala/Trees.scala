@@ -1,16 +1,25 @@
+import GCD.i
+
 import scala.Int.int2double
 import scala.math.BigDecimal.int2bigDecimal
 import scala.math.BigInt.int2bigInt
 
 object Trees extends App {
-  if (args(0).isEmpty) {
-    println(" " + " " + "*")
-    println(" " + "*" * 3)
-    println("*" * 5)
-  }
-  else for (i <- 1 to args(0).toInt) {
-    print(" " * (args(0).toInt - i))
-    println(("*" * i) * 2)
-  }
+  var myDefault = 3
+  if (args.length > 0) {
+    println(s"We got ${args.length} arguments")
+    myDefault = args(0).toInt
+  } else
+    println("We got nothing; we will use the default value")
+
+  println(s"My default value is $myDefault")
+
+  for (i <- 1 to myDefault) {
+    print(" " * (myDefault - i))
+  println(("*" * i) * 2) }
 }
+
+
+
+
 
