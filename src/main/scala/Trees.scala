@@ -16,7 +16,8 @@ object Trees extends App {
 
   for (i <- 1 to myDefault) {
     print(" " * (myDefault - i))
-  println(("*" * i) * 2) }
+  println("*" * (i * 2 -1)) }
+
 }
 
 
